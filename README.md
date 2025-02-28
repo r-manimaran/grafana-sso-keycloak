@@ -71,12 +71,16 @@ http://localhost:3000
 
 ![alt text](images/image-6.png)
 
+- Provide the URL associated to the grafana.
+
 ![alt text](images/image-7.png)
 
 - Turn-on client authentication on the new client
+
 ![alt text](images/image-8.png)
 
 - Get the client secret and map it in the grafana.ini file
+
 ![alt text](images/image-9.png)
 
 ## Add new User in Keycloak realm
@@ -92,9 +96,14 @@ http://localhost:3000
 ![alt text](images/image-11.png)
 
 - Now the password is set for the user.
+
 ![alt text](images/image-12.png)
 
 ## Testing Keycloak user authentication using Postman
+
+- Download and import the postman collection from the postman folder.
+- Update the client_id, client_sercret, username and password values.
+- Test the Get Access Token endpoint.
 
 ![alt text](images/image-13.png)
 
@@ -111,8 +120,11 @@ http://localhost:3000
 ## Test SSO from Grafana
 - Launch grafana
 - Click the Sign-in using Keycloak button. You will be re-directed to keycloak authentication page.
+
 ![alt text](images/image-17.png)
+
 - On clicking sign-in, it will authenticate in keycloak and redirect to Grafana
+
 ![alt text](images/image-18.png)
 
 ## Check logged in user details in Grafana
@@ -123,9 +135,10 @@ http://localhost:3000
 - This information are pass from Keycloak to grafana. Grafana will use the userinfo endpoint in keycloak to get the details.
 
 - Click the profile link to vie the full profile information.
+
 ![alt text](images/image-20.png)
 
-- By default it will map the logged in user to Viewer role.
+- By default it will map the logged in user to Viewer role. (because of the setting in the grafana.ini file)
 
 ![alt text](images/image-21.png)
 
